@@ -8,6 +8,8 @@ TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = project.v
 
+COMPILE_ARGS += -g2012
+
 ifneq ($(GATES),yes)
 
 # RTL simulation:
@@ -35,9 +37,8 @@ endif
 COMPILE_ARGS 		+= -I$(SRC_DIR)
 
 # Include the testbench sources:
-VERILOG_SOURCES += $(PWD)/../src/project.v \
-                   $(PWD)/../src/A05_array_mult4x4.v \
-                   $(PWD)/A05_ref.v
+VERILOG_SOURCES += $(PWD)/tb.v 
+                  
 TOPLEVEL = tb
 
 # List test modules to run, separated by commas and without the .py suffix:
