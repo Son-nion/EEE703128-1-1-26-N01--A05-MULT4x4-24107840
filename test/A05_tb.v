@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module a05_tb;
+module A05_tb;
 
     // -----------------------------------------------------------------
     // Tin hieu kich thich va quan sat
