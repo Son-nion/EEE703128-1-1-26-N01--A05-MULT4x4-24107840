@@ -44,9 +44,9 @@ jobs:
           name: test-results
       - name: Run Custom SystemVerilog Testbench
         run: |
-        sudo apt-get update && sudo apt-get install -y iverilog
-        iverilog -g2012 -o custom_sim.vvp test/05_tb.sv src/A05_array_mult4x4.v test/A05_ref.v
-        vvp custom_sim.vvp
+         sudo apt-get update && sudo apt-get install -y iverilog
+         iverilog -g2012 -o custom_sim.vvp test/05_tb.sv src/A05_array_mult4x4.v test/A05_ref.v
+         vvp custom_sim.vvp
           path: |
             test/tb.fst
             test/results.xml
